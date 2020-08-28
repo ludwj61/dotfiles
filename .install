@@ -6,10 +6,10 @@
   temp_directory_dotfiles=$(mktemp -d)
   git clone "$url" "$temp_directory_dotfiles" 2>&1
   cp -rb "$temp_directory_dotfiles"/. ~
-} | dialog --progressbox "Installing dotfiles..." 30 70
+} 
 
 # finalize
 {
   sudo chsh -s /usr/bin/zsh "$USER"
   xdg-user-dirs-update
-} | dialog --progressbox "Finalizing..." 30 70
+} 
