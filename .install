@@ -89,7 +89,7 @@ yay -S --needed --noconfirm "${dependencies_aur[@]}" 2>&1 | dialog --progressbox
 
 # install dotfiles
 {
-  [ "$SSH" ] && url="git@github.com:phisch/dotfiles.git" || url="https://github.com/phisch/dotfiles.git"
+  [ "$SSH" ] && url="git@github.com:ludwj61/dotfiles.git" || url="https://github.com/ludwj61/dotfiles.git"
   temp_directory_dotfiles=$(mktemp -d)
   git clone "$url" "$temp_directory_dotfiles" 2>&1
   cp -rb "$temp_directory_dotfiles"/. ~
